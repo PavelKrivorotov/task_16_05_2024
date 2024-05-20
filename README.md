@@ -1,7 +1,6 @@
 ## Installation
 
 1) Clone this repository
-
   ```bash
   git clone https://github.com/PavelKrivorotov/task_16_05_2024.git
   ```
@@ -9,7 +8,6 @@
 ## Usage
 
 1) Build and run containers in work directory:
-
  ```bash
  docker compose up
  ```
@@ -37,4 +35,9 @@ postgres=# \c task_16_05_2024
 1) `Command 1`: Initialize table `users` with columns `id`, `fio` (Surname, Name, Patronymic), `dob` (Date of birthday), `sex` (Male or Female)
 ```bash
 /app # python manage.py 1
+```
+
+2) `Command 2`: Add new object in `users` table
+```bash
+/app # python manage.py 2 'Ivanov Ivan Ivanovich' 2000-01-01 Male
 ```
