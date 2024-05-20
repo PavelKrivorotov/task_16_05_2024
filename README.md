@@ -71,3 +71,13 @@ Out:
 Out:
 Time query:  401.2895753631592  ms
 ```
+
+7) `Command 6`: Select all users where `fio` startswith `F` and `sex` = `Male`. Change table users (add new column `fio_first_word`) and query
+```bash
+/app # python manage.py 6
+```
+
+```bash
+Out:
+Time query:  385.9735753631592  ms
+```
