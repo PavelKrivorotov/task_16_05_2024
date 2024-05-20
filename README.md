@@ -81,3 +81,8 @@ Time query:  401.2895753631592  ms
 Out:
 Time query:  385.9735753631592  ms
 ```
+
+8) `Command 7`: Clear database
+```bash
+/app # python manage.py 7
+```
