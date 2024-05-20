@@ -31,3 +31,10 @@ docker compose exec psql -U postgres
 ```bash
 postgres=# \c task_16_05_2024
 ```
+
+## Example
+
+1) `Command 1`: Initialize table `users` with columns `id`, `fio` (Surname, Name, Patronymic), `dob` (Date of birthday), `sex` (Male or Female)
+```bash
+/app # python manage.py 1
+```
