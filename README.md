@@ -61,3 +61,13 @@ Out:
 ```bash
 /app # python manage.py 4 --only-100-males-with-fio-startswith-f
 ```
+
+6) `Command 5`: Select all users where `fio` startswith `F` and `sex` = `Male`
+```bash
+/app # python manage.py 5
+```
+
+```bash
+Out:
+Time query:  401.2895753631592  ms
+```
