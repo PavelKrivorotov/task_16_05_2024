@@ -52,3 +52,12 @@ Out:
 1, Ivanov Ivan Ivanovich, 2000-01-01, Male, 24
 ```
 
+4) `Command 4`: Add 1\`000\`000 new objects in `users` table
+```bash
+/app # python manage.py 4
+```
+
+5) `Command 4`: Add 100 new objects with `fio` startswith `F` and `sex` = `Male` in `users` table
+```bash
+/app # python manage.py 4 --only-100-males-with-fio-startswith-f
+```
