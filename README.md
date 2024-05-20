@@ -41,3 +41,14 @@ postgres=# \c task_16_05_2024
 ```bash
 /app # python manage.py 2 'Ivanov Ivan Ivanovich' 2000-01-01 Male
 ```
+
+3) `Command 3`: Select all objects in table `users` where columns `fio` and `dob` is unique
+```bash
+/app # python manage.py 3
+```
+
+```bash
+Out:
+1, Ivanov Ivan Ivanovich, 2000-01-01, Male, 24
+```
+
