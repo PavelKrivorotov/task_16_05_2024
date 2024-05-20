@@ -86,3 +86,5 @@ Time query:  385.9735753631592  ms
 ```bash
 /app # python manage.py 7
 ```
+
+## Detailed analysis
