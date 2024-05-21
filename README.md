@@ -52,12 +52,12 @@ Out:
 1, Ivanov Ivan Ivanovich, 2000-01-01, Male, 24
 ```
 
-4) `Command 4`: Add 1\`000\`000 new objects in `users` table
+4) `Command 4`: Add `1,000,000` new objects in `users` table
 ```bash
 /app # python manage.py 4
 ```
 
-5) `Command 4`: Add 100 new objects with `fio` startswith `F` and `sex` = `Male` in `users` table
+5) `Command 4`: Add `100` new objects with `fio` startswith `F` and `sex` = `Male` in `users` table
 ```bash
 /app # python manage.py 4 --only-100-males-with-fio-startswith-f
 ```
@@ -94,8 +94,42 @@ Time query:  385.9735753631592  ms
 SELECT * FROM users WHERE fio LIKE 'F%' AND sex = 'Male';
 ```
 
-
 `Command 6 (Query-2)`
 ```sql
 SELECT * FROM users WHERE fio_first_word = 'F' AND sex = 'Male';
 ```
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Query</th>
+      <th colspan="2">Mashine</th>
+      <th colspan="2">Docker</th>
+    </tr>
+    <tr>
+      <th>app time (ORM)</th>
+      <th>explain analyse</th>
+      <th>app time (ORM)</th>
+      <th>explain analyse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Query-1</td>
+      <td>670 ms</td>
+      <td>186 ms</td>
+      <td>597 ms</td>
+      <td>159 ms</td>
+    </tr>
+    <tr>
+      <td>Query-2</td>
+      <td>578 ms</td>
+      <td>56 ms</td>
+      <td>527 ms</td>
+      <td>56 ms</td>
+    </tr>
+  </tbody>
+</table>
+
+The results are nothing more than the average time of `10` requests for each test. It is also worth saying that tests for `Mashine`
+and `Docker` were carried out on various random samples containing `1,000,000` rows
