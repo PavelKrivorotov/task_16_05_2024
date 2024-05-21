@@ -139,3 +139,8 @@ and `Docker` were carried out on various random samples containing `1,000,000` r
    **Answer: Since the `Query-1` finds about `40,000` records that satisfy the condition, it turns out that all of these records
    need to be sent over the network between the `Database` and `ORM`. This is where this difference comes from (overhead for data
    transfer between services)**
+
+2) How was the optimization achieved?
+
+   **Answer: A new column `fio_first_word` was created which contains the first letter for the string written to `fio`. And the
+   `btree` index has been placed on this column**
