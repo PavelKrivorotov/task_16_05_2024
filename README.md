@@ -88,3 +88,14 @@ Time query:  385.9735753631592  ms
 ```
 
 ## Detailed analysis
+
+`Command 5 (Query-1)`
+```sql
+SELECT * FROM users WHERE fio LIKE 'F%' AND sex = 'Male';
+```
+
+
+`Command 6 (Query-2)`
+```sql
+SELECT * FROM users WHERE fio_first_word = 'F' AND sex = 'Male';
+```
