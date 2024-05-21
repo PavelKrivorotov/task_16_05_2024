@@ -133,3 +133,9 @@ SELECT * FROM users WHERE fio_first_word = 'F' AND sex = 'Male';
 
 The results are nothing more than the average time of `10` requests for each test. It is also worth saying that tests for `Mashine`
 and `Docker` were carried out on various random samples containing `1,000,000` rows
+
+1) Why the time difference between `App time (ORM)` and `Explain analyse` different by 10 times?
+   
+   **Answer: Since the `Query-1` finds about `40,000` records that satisfy the condition, it turns out that all of these records
+   need to be sent over the network between the `Database` and `ORM`. This is where this difference comes from (overhead for data
+   transfer between services)**
